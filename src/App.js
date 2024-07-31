@@ -1,23 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import SearchInputComponent from "./components/search-input.component";
+import MovieContainerComponent from "./components/movie-container.component"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Movie Finder!</h1>
+      <SearchInputComponent></SearchInputComponent>
+      <MovieContainerComponent></MovieContainerComponent>
     </div>
   );
 }
