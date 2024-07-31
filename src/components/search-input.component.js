@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchButtonComponent from './search-button.component';
+import { fetchMovies } from '../services/OMDbAPI.service';
 
 function SearchInputComponent () {
   return(
@@ -9,7 +10,9 @@ function SearchInputComponent () {
         placeholder="what movie do you want to go to?"
       >
       </input>
-      <SearchButtonComponent></SearchButtonComponent>
+      <SearchButtonComponent
+        onChange={fetchMovies}
+      ></SearchButtonComponent>
     </form>
   )
 }
