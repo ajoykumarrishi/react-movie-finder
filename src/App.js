@@ -7,11 +7,26 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   return (
-    <div className="container-fluid movie-finder-bg py-5">
-      <div className="container">
-        <h1 className="text-center mb-4 movie-title">🎬 CineMagic Explorer 🍿</h1>
-        <SearchInputComponent setMovies={setMovies} />
-        <MovieContainerComponent movies={movies} />
+    <div className="movie-finder-bg">
+      <div className="container py-5">
+        <header className="text-center mb-5">
+          <a href="/" className="movie-title text-decoration-none">
+            <h1 className="display-4">🎬 CineMagic Explorer 🍿</h1>
+          </a>
+          <p className="lead">Discover your next favorite movie adventure!</p>
+        </header>
+
+        <section className="search-section mb-5">
+          <SearchInputComponent setMovies={setMovies} />
+        </section>
+
+        <main className="movie-results">
+          <MovieContainerComponent movies={movies} />
+        </main>
+
+        <footer className="footer mt-5 text-center text-light">
+          <p>&copy; {new Date().getFullYear()} CineMagic Explorer. All rights reserved.</p>
+        </footer>
       </div>
     </div>
   );

@@ -1,3 +1,7 @@
+body {
+  background-color: #1a1a2e;
+}
+
 .movie-finder-bg {
   background-color: #1a1a2e;
   min-height: 100vh;
@@ -10,10 +14,26 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.lead {
+  color: #ffd700;
+}
+
+.search-section {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+}
+
 .search-input {
-  border: 2px solid #ffd700;
   background-color: rgba(255, 255, 255, 0.1);
+  border: none;
   color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
 }
 
 .search-input::placeholder {
@@ -22,20 +42,25 @@
 
 .search-button {
   background-color: #ffd700;
-  border-color: #ffd700;
+  border: none;
   color: #1a1a2e;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
 }
 
 .search-button:hover {
   background-color: #ffed4a;
-  border-color: #ffed4a;
   color: #1a1a2e;
 }
 
 .movie-card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1) !important;
   border: none;
   transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .movie-card:hover {
@@ -48,4 +73,23 @@
 
 .movie-card .card-text {
   color: #ffffff;
+}
+
+.movie-poster-container {
+  flex: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
 }
