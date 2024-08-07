@@ -1,7 +1,15 @@
 const API_KEY = 'b7da8d63';
 
-export function fetchMovies (e, input = 'frozen') {
-  e.preventDefault();
-  const url = `http://www.omdbapi.com/?apikey=${API_KEY}&t=${input}`
-  fetch(url).then((response) => response.json()).then(data => console.log(data));
+export async function searchMovies(query) {
+  const url = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(query)}`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+    throw error;
+  }
 }
