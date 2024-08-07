@@ -1,8 +1,13 @@
 import React from 'react';
 
-function SearchButtonComponent ({ onChange }) {
+function SearchButtonComponent ({ handleUserSearchSubmit }) {
   return (
-    <button onClick={onChange}>Search</button>
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        handleUserSearchSubmit();
+      }}
+    >Search</button>
   )
 }
 

@@ -1,0 +1,51 @@
+.movie-finder-bg {
+  background-color: #1a1a2e;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.movie-title {
+  font-family: 'Fredoka One', cursive;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-input {
+  border: 2px solid #ffd700;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-button {
+  background-color: #ffd700;
+  border-color: #ffd700;
+  color: #1a1a2e;
+}
+
+.search-button:hover {
+  background-color: #ffed4a;
+  border-color: #ffed4a;
+  color: #1a1a2e;
+}
+
+.movie-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card .card-title {
+  color: #ffd700;
+}
+
+.movie-card .card-text {
+  color: #ffffff;
+}
