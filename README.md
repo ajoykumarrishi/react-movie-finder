@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# CineMagic Explorer 🎬🍿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CineMagic Explorer is a React application that allows users to search for movies and view their details using the OMDb API. This project demonstrates a simple yet elegant way to integrate a third-party API with a React frontend, making it easy to discover and explore movies.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Movie Search**: Users can search for movies by title.
+- **Responsive Design**: The application is responsive and works well on different screen sizes.
+- **Interactive UI**: Users get visual feedback through hover effects and interactive elements.
+- **Error Handling**: Graceful handling of network errors and invalid search results.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: For building the user interface.
+- **Bootstrap**: For responsive design and styling.
+- **OMDb API**: For fetching movie data.
+- **CSS**: For custom styles.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (version 14 or higher)
+- npm (version 6 or higher)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/ajoykumarrishi/react-movie-finder.git
+    cd react-movie-finder
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start the development server**:
+    ```bash
+    npm start
+    ```
 
-### `npm run eject`
+4. **Open your browser** to `http://localhost:3000` to view the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This application can be deployed to GitHub Pages. Follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Build the project**:
+    ```bash
+    npm run build
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Deploy to GitHub Pages**:
+    ```bash
+    npm run deploy
+    ```
 
-## Learn More
+## Live Demo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Check out the live demo of the application [here](https://ajoykumarrishi.github.io/react-movie-finder).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## File Structure
 
-### Code Splitting
+- `src`
+  - `components`
+    - `MovieContainerComponent.js`
+    - `SearchInputComponent.js`
+    - `SearchButtonComponent.js`
+  - `services`
+    - `OMDbAPI.service.js`
+  - `App.js`
+  - `index.js`
+  - `App.css`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Components
 
-### Analyzing the Bundle Size
+### `MovieContainerComponent`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Renders a list of movies. Displays a message if no movies are found.
 
-### Making a Progressive Web App
+### `SearchInputComponent`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Includes the search input and handles user search submissions.
 
-### Advanced Configuration
+### `SearchButtonComponent`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Handles the search button click event.
 
-### Deployment
+### `OMDbAPI.service.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Handles communication with the OMDb API.
 
-### `npm run build` fails to minify
+## Styles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The application's custom styles are defined in `App.css`, including background colors, card styles, and button designs.
+
+## Acknowledgements
+
+- **OMDb API** for providing movie data.
+- **Bootstrap** for the responsive design framework.
+
+## License
+
+This project is licensed under the MIT License.
