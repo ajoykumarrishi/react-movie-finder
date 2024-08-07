@@ -16,19 +16,17 @@ function SearchInputComponent({ setMovies }) {
   };
 
   return (
-    <form onSubmit={handleUserSearchSubmit} className="mb-4">
-      <div className="input-group">
-        <input
-          type="text"
-          className="form-control search-input"
-          placeholder="Discover your next favorite movie..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button className="btn search-button" type="submit">
-          Explore
-        </button>
-      </div>
+    <form onSubmit={handleUserSearchSubmit} className="mb-4 d-flex">
+      <input
+        type="text"
+        className="search-input flex-grow-1"
+        placeholder="Discover your next favorite movie..."
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+      <button className="search-button" type="submit">
+        Explore
+      </button>
     </form>
   );
 }
