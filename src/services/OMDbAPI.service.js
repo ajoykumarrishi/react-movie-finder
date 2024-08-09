@@ -18,17 +18,3 @@ export async function searchMovies(query) {
     throw error;
   }
 }
-
-export async function fetchMovieDetails(imdbID) {
-  const url = `https://www.omdbapi.com/?apikey=${API_KEY}&i=${imdbID}&plot=short`;
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return await response.json();
-  } catch (error) {
-    console.error('There was a problem fetching movie details:', error);
-    throw error;
-  }
-}

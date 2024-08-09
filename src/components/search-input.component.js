@@ -6,13 +6,8 @@ function SearchInputComponent({ setMovies }) {
 
   const handleUserSearchSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const data = await searchMovies(input);
-      setMovies(data.Search || []);
-    } catch (error) {
-      console.error('Error fetching movie data:', error);
-      setMovies([]);
-    }
+    const data = await searchMovies(input);
+    setMovies(data.Search || []);
   };
 
   return (

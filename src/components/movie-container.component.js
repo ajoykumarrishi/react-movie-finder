@@ -5,6 +5,10 @@ function MovieContainerComponent({ movies }) {
     return <div className="text-center mt-5">Search for movies to start your cinematic journey!</div>;
   }
 
+  const createIMDBLink = (movie) => {
+    return `https://www.imdb.com/title/${movie.imdbID}`;
+  }
+
   return (
     <div className="row row-cols-1 row-cols-md-3 g-4">
       {movies.map((movie) => (
@@ -18,7 +22,7 @@ function MovieContainerComponent({ movies }) {
               />
             </div>
             <div className="card-body">
-              <h5 className="card-title">{movie.Title}</h5>
+              <h5 className="card-title"><a href={createIMDBLink(movie)} style={{ textDecoration: 'none' }} rel="noreferrer" target="_blank">{movie.Title}</a></h5>
               <p className="card-text">Year: {movie.Year}</p>
             </div>
           </div>
